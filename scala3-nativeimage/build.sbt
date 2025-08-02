@@ -23,7 +23,9 @@ val deps = Seq(
   "com.softwaremill.sttp.client3" %% "zio"         % "3.9.7",
   "com.softwaremill.sttp.client3" %% "core"        % "3.9.7"
 )
-
+libraryDependencies += "org.bytedeco" % "pytorch" % "2.7.1-1.5.12"  classifier "macosx-x86_64" //classifier "macosx-arm64"  classifier "windows-x86_64" classifier "linux-x86_64"
+// https://mvnrepository.com/artifact/org.bytedeco/pytorch-platform
+libraryDependencies += "org.bytedeco" % "pytorch-platform" % "2.7.1-1.5.12" //classifier "linux-x86_64"//"macosx-x86_64" //"linux-x86_64"
 lazy val root = project
   .in(file("."))
   .enablePlugins(NativeImagePlugin)
